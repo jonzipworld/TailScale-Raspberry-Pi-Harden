@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Raspberry Pi Hardening Script
 # Based on Raspberry Pi Hardening Manual
-# Usage: bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh)
+# Usage: bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh)
 
 # Color output
 RED='\033[0;31m'

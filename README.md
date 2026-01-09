@@ -7,7 +7,7 @@ Automated hardening script for Raspberry Pi OS Lite configured as a Tailscale su
 Run directly from GitHub (one-liner):
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh)
 ```
 
 ## What It Does
@@ -38,13 +38,13 @@ This script implements the following security hardening measures:
 ### Method 1: One-Liner (Recommended)
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh)
 ```
 
 ### Method 2: Download and Run
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh -o rpi-harden.sh
+curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh -o rpi-harden.sh
 chmod +x rpi-harden.sh
 ./rpi-harden.sh
 ```
@@ -52,7 +52,7 @@ chmod +x rpi-harden.sh
 ### Method 3: Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/jonzipworld/TailScale-Raspberry-Pi-Harden.git
 cd YOUR_REPO
 chmod +x rpi-harden.sh
 ./rpi-harden.sh
@@ -72,7 +72,7 @@ The script will prompt you for:
 
 ```bash
 # Run the script
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh)
 
 # When prompted for subnet routes:
 192.168.1.0/24,192.168.100.0/24

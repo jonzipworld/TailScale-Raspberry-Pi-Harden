@@ -1,0 +1,39 @@
+# Backup files
+*.backup
+*.bak
+*~
+*.orig
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test files
+test/
+testing/
+
+# Local configuration
+local.conf
+*.local
+
+# SSH keys (just in case)
+*.pem
+*.key
+id_rsa*

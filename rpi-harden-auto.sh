@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Raspberry Pi Hardening Script - Non-Interactive Version
-# Usage: bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) [OPTIONS]
+# Usage: bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) [OPTIONS]
 # Options:
 #   --hostname HOSTNAME          Set hostname (default: tailscale-router)
 #   --subnets ROUTES             Comma-separated subnet routes (e.g., 192.168.1.0/24,192.168.2.0/24)

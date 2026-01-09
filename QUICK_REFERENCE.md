@@ -3,19 +3,19 @@
 ## Basic Usage (Interactive)
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden.sh)
 ```
 
 ## Automated Usage (Non-Interactive)
 
 ### Minimal Setup
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh)
 ```
 
 ### Full Setup with All Options
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "subnet-router-01" \
   --subnets "192.168.1.0/24,192.168.100.0/24" \
   --remove-pi \
@@ -24,7 +24,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main
 
 ### Setup Without Reboot (for testing)
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "test-router" \
   --subnets "192.168.1.0/24" \
   --skip-reboot
@@ -33,21 +33,21 @@ bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main
 ### Setup for Zip World Sites
 ```bash
 # Big Base Router
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "zipworld-bigbase-router" \
   --subnets "10.10.10.0/24" \
   --remove-pi \
   --disable-ssh
 
 # Aero Router
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "zipworld-aero-router" \
   --subnets "10.20.20.0/24" \
   --remove-pi \
   --disable-ssh
 
 # Big Top Router
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "zipworld-bigtop-router" \
   --subnets "10.30.30.0/24" \
   --remove-pi \
@@ -136,7 +136,7 @@ apt list --upgradable
 
 ### Home Network Router
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "home-router" \
   --subnets "192.168.1.0/24" \
   --disable-ssh
@@ -144,7 +144,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main
 
 ### Multiple VLANs
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "vlan-router" \
   --subnets "192.168.1.0/24,192.168.10.0/24,192.168.20.0/24" \
   --remove-pi \
@@ -153,7 +153,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main
 
 ### Testing/Development (Don't disable SSH or reboot)
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "test-router" \
   --subnets "10.0.0.0/24" \
   --skip-reboot
@@ -161,7 +161,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main
 
 ### Site-to-Site VPN
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
   --hostname "site-a-router" \
   --subnets "10.10.0.0/16" \
   --remove-pi \
@@ -227,7 +227,7 @@ dmesg | tail -50
 
 ```bash
 # Update the script itself
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh)
 
 # Manual system updates
 sudo apt update && sudo apt upgrade -y
@@ -250,7 +250,7 @@ You can call this script from Ansible for fleet deployment:
   tasks:
     - name: Download and run hardening script
       shell: |
-        bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/rpi-harden-auto.sh) \
+        bash <(curl -fsSL https://raw.githubusercontent.com/jonzipworld/TailScale-Raspberry-Pi-Harden/main/rpi-harden-auto.sh) \
           --hostname "{{ inventory_hostname }}" \
           --subnets "{{ tailscale_subnets }}" \
           --remove-pi \
@@ -273,7 +273,7 @@ You can call this script from Ansible for fleet deployment:
    git add rpi-harden.sh rpi-harden-auto.sh README.md
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git remote add origin https://github.com/jonzipworld/TailScale-Raspberry-Pi-Harden.git
    git push -u origin main
    ```
 
